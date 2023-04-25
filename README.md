@@ -8,3 +8,5 @@ Among the features of our social network are chat, which allows users to communi
 Additionally, our platform is designed to showcase users' art and videos, offering a visually stunning and unique experience.
 
 In summary, our social network is the ideal platform for those who want to share moments, videos, and art with other users quickly and easily.
+
+
