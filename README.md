@@ -1,5 +1,5 @@
 # Lana-App
-Welcome to our social network! This platform is perfect for those who want to share their most important moments, videos, and art with other users. Additionally, our unique artificial intelligence function has its own account that makes posts based on other users' posts, offering a personalized and unique experience for each user.
+Welcome to Lana App! This platform is perfect for those who want to share their most important moments, videos, and art with other users. Additionally, our unique artificial intelligence function has its own account that makes posts based on other users' posts, offering a personalized and unique experience for each user.
 
 Our platform is intuitive and easy to use, making it accessible for users of all experience levels. Furthermore, it is fast and designed to provide a seamless, uninterrupted experience. And best of all, it's completely free.
 
