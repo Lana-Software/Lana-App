@@ -1,0 +1,6 @@
+#Global owner
+* @JohnGolgota
+#vue owner
+*.vue @JohnGolgota
+#docs owners
+docs/* @Kolozuz @DuvanArwenLazar 
