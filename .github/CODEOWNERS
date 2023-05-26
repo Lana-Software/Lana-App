@@ -2,5 +2,9 @@
 * @JohnGolgota
 #vue owner
 *.vue @JohnGolgota
+# javascript owner
+*.js @JohnGolgota
 #docs owners
 docs/* @Kolozuz @DuvanArwenLazar 
+# source main reviewer
+src/*
