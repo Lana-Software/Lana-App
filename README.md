@@ -11,7 +11,7 @@
 > Welcome to Lana App! Here you'll find all the info  about this lil project :) 
 
 
-## :pushpin: What's this?
+## :pushpin: About Lana
 
 This platform is the perfect place for those who want to share their most important moments, videos, and art with other users. Additionally, our unique artificial intelligence function has its own account that makes posts based on other users' posts, offering a personalized and unique experience for each user.
 
