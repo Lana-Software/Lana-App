@@ -1,8 +1,8 @@
-blank_issues_enabled: false
+blank_issues_enabled: true
 contact_links:
-  - name: GitHub Community Support
+  - name: Support
     url: https://lana-software.github.io/Lana-App/
     about: Please ask and answer questions here.
-  - name: GitHub Security Bug Bounty
+  - name: Security Bug Bounty
     url: https://lana-software.github.io/Lana-App/
     about: Please report security vulnerabilities here.
