@@ -31,7 +31,7 @@ Among the features of our social network are chat, which allows users to communi
 
 ## Get Started
 
-> Refer [here](https://github.com/Lana-Software/Lana-App) for detailed instructions and documentation about all our features
+> Refer [here](https://lana-software.github.io/Lana-App/) for detailed instructions and documentation about all our features
 
 First head up to our official website clicking [here](www.lanaapp.com)
 
