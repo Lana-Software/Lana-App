@@ -35,15 +35,18 @@ Among the features of our social network are chat, which allows users to communi
 
 First head up to our official website clicking [here](www.lanaapp.com)
 
-![Gif Here that shows typing the url and entering the website](#)
+!<img src="https://i.giphy.com/media/ThrM4jEi2lBxd7X2yz/giphy.webp" width="250" alt="Placeholder gif"> 
+<!-- Gif Here that shows typing the url and entering the website -->
 
 Then click on Signup, type your email, username and password and click on register
 
-![Gif Here that shows how to fill the fields and register](#)
+<img src="https://i.giphy.com/media/13GIgrGdslD9oQ/giphy.webp" width="250" alt="placeholder gif" >
+<!-- Gif Here that shows how to fill the fields and register -->
 
-And that's it, you're all set! now you're part of this amazing family an are free to explore other user's content and enjoy all our features
+And that's it, you're all set! now you're part of this amazing family and are free to explore other users content and enjoy all our features
 
-![Gif here colorful that welcomes the user to our platform, showing some of the main feed content](#)
+<img src="https://i.giphy.com/media/BPJmthQ3YRwD6QqcVD/giphy.webp" width="250" alt="placeholder gif">
+<!-- Gif here colorful that welcomes the user to our platform, showing some of the main feed content -->
 
 # :gear: Technologies
 
