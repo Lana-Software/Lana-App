@@ -1,9 +1,7 @@
 ---
 name: Deja de joder
 about: Por favor deja de joder
-title: 'Ya estas jodiendo'
+title: ''
 labels: ''
 assignees: ''
 ---
-
-# Mis huevos
