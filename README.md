@@ -50,6 +50,7 @@ And that's it, you're all set! now you're part of this amazing family and are fr
 
 # :gear: Technologies
 
+<!-- Technologies stack table -->
 <table>
   <tr>
   <th>Frontend</th>
@@ -60,25 +61,25 @@ And that's it, you're all set! now you're part of this amazing family and are fr
    <a href="www.vuejs.com"><img src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D" width="100%"></a>
   </td>
   <td>
-   <a href="www.tailwind.com"><img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" width="100%"></a>
+   <a href="www.tailwind.com"><img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"></a>
   </td>
  </tr>
  <tr>
   <th>Design</th>
-  <td>
-   <a href="www.figma.com"><img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" width="100%"></a>
+  <td colspan="3">
+   <a href="www.figma.com"><img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"></a>
   </td>
  </tr>
  <tr>
   <th>Backend</th>
-   <td>
-    <a href="www.nodejs.com"><img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" width="100%"></a>
+   <td colspan="3">
+    <a href="www.nodejs.com"><img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></a>
    </td>
  </tr>
  <tr>
   <th>Database</th>
-   <td>
-    <a href="www.mongodb.com"><img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" width="100%"></a>
+   <td colspan="3">
+    <a href="www.mongodb.com"><img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"></a>
    </td>
  </tr>
 </table>
