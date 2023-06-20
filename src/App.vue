@@ -1,9 +1,11 @@
 <script setup lang="ts">
   import indexNavbar from './components/navbar.vue'
+  import postNavbar from './views/post.vue'
 </script>
 
 <template>
-  <indexNavbar msg="" />
+  <indexNavbar />
+  <postNavbar />
 </template>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  
+
 </script>
 
 <template>
@@ -39,11 +39,23 @@
     border: none;
     border-radius: 24px;
     color: var(--alter-color-two);
+    padding: 5px;
+  }
+
+  .register-button:hover {
+    background-color: #614ae6;
+    transition: 0.4s;
+  }
+
+  .register-button:not(:hover) {
+    background-color: (--alter-color-two);
+    transition: 0.4s;
   }
 
   .register-button { background-color: var(--primary-color); }
   a { text-decoration: none; }
   a:visited { text-decoration: none; }
+  a:hover { text-decoration: underline; }
   span, a { color: var(--secondary-color); }
   span { padding: 0px 4px; }
 </style>
