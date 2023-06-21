@@ -6,7 +6,6 @@
 	<div>
 		<h2 class="share-title"> Share Your Moments! </h2>
 	</div>
-	<font-awesome-icon icon="fa-solid fa-user-secret" />
 	<background />
 </template>
 

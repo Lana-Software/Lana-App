@@ -15,12 +15,12 @@
         </div>
         <div class="icons">
             <div class="container-heart">
-                <i class="heart"></i>
+                <fa icon="fa-regular fa-heart" style="color: #7661e8;" />
                 <span class="likes">{{ total_likes }}</span>
             </div>
             <div class="container-comment">
                 <span class="comments">{{ total_comments }}</span>
-                <i class="comments-icon"></i>
+                <fa icon="fa-regular fa-comment" style="color: #7661e8;" />
             </div>
         </div>
 	</div>
