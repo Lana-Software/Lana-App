@@ -1,10 +1,12 @@
 <script setup lang="ts">
-    let total_likes:number = 44
-    let total_comments:number = 12
+    import { VueElement } from 'vue';
+
+    let total_likes:number = 443
+    let total_comments:number = 120
 </script>
 
 <template>
-	<div class="background">
+	<div class="background row">
         <div class="image">
             <img src="porsche.jpg" alt="">
         </div>
@@ -15,12 +17,12 @@
         </div>
         <div class="icons">
             <div class="container-heart">
-                <fa icon="fa-regular fa-heart" style="color: #7661e8;" />
+                <fa icon="fa-regular fa-heart" class="icon" style="color: #7661e8;" />
                 <span class="likes">{{ total_likes }}</span>
             </div>
             <div class="container-comment">
                 <span class="comments">{{ total_comments }}</span>
-                <fa icon="fa-regular fa-comment" style="color: #7661e8;" />
+                <fa icon="fa-regular fa-comment" class="icon" style="color: #7661e8;" />
             </div>
         </div>
 	</div>
@@ -65,4 +67,16 @@
         height: 100%;
         border-radius: 50%;
     }
+
+    .icons {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: -35px;
+        font-size: 11px;
+        padding: 3px;
+    }
+
+    .icon { padding: 0 4.5px; }
+
 </style>
