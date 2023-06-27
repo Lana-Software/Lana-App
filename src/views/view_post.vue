@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import post from "../components/post.vue";
+import post from "../components/component_post.vue";
 
 interface user {user_id: number, user_profile: string, recent_post: {comments:number, likes:number, image:string}}
 let users_info:Array<user> = [

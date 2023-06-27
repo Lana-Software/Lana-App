@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import indexNavbar from "./components/navbar.vue";
-import posts from "./views/post.vue";
-import history from "./views/history.vue";
+import index_navbar from "./components/component_navbar.vue";
+import index_posts from "./views/view_post.vue";
+import index_history from "./views/view_history.vue";
 </script>
 
 <template>
-	<indexNavbar />
-	<posts />
-	<history />
+	<index_navbar />
+	<index_posts />
+	<index_history />
+
 </template>
 
 <style scoped></style>

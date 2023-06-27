@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { VueElement } from 'vue';
+    // import { VueElement } from 'vue';
 
     let total_likes:number = 443
     let total_comments:number = 120
