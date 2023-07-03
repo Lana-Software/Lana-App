@@ -1,4 +1,8 @@
 <script setup lang="ts">
+    const myElementById: HTMLElement | null = document.getElementById('img');
+    myElementById?.addEventListener('click', () => {
+        console.log("Si");
+    })
 </script>
 
 <template>
