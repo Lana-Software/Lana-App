@@ -8,22 +8,22 @@ import { users_info } from "./users_info";
 	<div>
 		<h2 class="share-title">Share Your Moments!</h2>
 	</div>
-	<div class="elements-container">
-		<div class="elements" v-for="{user_id} in users_info" :key="user_id">
-			<post :usuario="user_id"/>
+	<div class="posts-container">
+		<div class="post-element" v-for="(user, i) in users_info" :id="'post'+i" :key="'post'+i">
+			<post :usuario="user.user_id"/>
 		</div>
 	</div>
 </template>
 
 <style scoped>
-.elements-container {
+.posts-container {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
 	justify-content: center;
 }
 
-.elements {
+.post-element {
 	padding: 5px 10px;
 }
 </style>

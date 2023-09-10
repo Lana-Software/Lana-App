@@ -6,13 +6,13 @@
 </script>
 
 <template>
-	<div class="background row">
+	<div class="post-container">
         <div class="image">
-            <img src="porsche.jpg" alt="">
+            <img src="porsche.jpg" alt="post background image">
         </div>
         <div class="circle">
             <div class="profile">
-                <img src="profile.jpg" alt="">
+                <img src="jhonny_pfp.png" alt="profile picture">
             </div>
         </div>
         <div class="icons">
@@ -29,13 +29,13 @@
 </template>
 
 <style scoped>
-    .background, .image {
+    .post-container, .image {
         width: 150px;
         height: 230px;
         background-color: var(--alter-color-two);
     }
 
-    .background {
+    .post-container {
         box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
         border-radius: 24px;
         position: relative;
