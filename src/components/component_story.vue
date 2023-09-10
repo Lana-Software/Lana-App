@@ -6,9 +6,9 @@
 </script>
 
 <template>
-    <div class="history-container" id="history-container">
+    <div class="story-container">
         <div class="image">
-            <img src="porsche.jpg" alt="">
+            <img src="dateunvlog.jpg" alt="">
         </div>
         <div class="elements">
             <div class="circle" id="circle">
@@ -25,12 +25,12 @@
 
 <style scoped>
 
-    .history-container {
+    .story-container {
         text-align: center;
         box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
     }
 
-    .image, .history-container {
+    .image, .story-container {
         width: 113px;
         height: 197px;
         background-color: var(--alter-color-two);
