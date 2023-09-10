@@ -1,45 +1,7 @@
 <script setup lang="ts">
 import post from "../components/component_post.vue";
+import { users_info } from "./users_info";
 
-interface user {user_id: number, user_profile: string, recent_post: {comments:number, likes:number, image:string}}
-let users_info:Array<user> = [
-	{
-		user_id: 10010210201,
-		user_profile: 'profile.jpg',
-		recent_post: {
-			comments: 18,
-			likes: 69,
-			image: 'porsche.jpg'
-		}
-	},
-	{
-		user_id: 5434343243,
-		user_profile: 'profile.jpg',
-		recent_post: {
-			comments: 54,
-			likes: 45,
-			image: ''
-		}
-	},
-	{
-		user_id: 5434343243,
-		user_profile: 'profile.jpg',
-		recent_post: {
-			comments: 2,
-			likes: 180,
-			image: 'profile.jpg'
-		}
-	},
-	{
-		user_id: 10010210201,
-		user_profile: 'profile.jpg',
-		recent_post: {
-			comments: 19,
-			likes: 670,
-			image: 'porsche.jpg'
-		}
-	}
-]
 </script>
 
 <template>
@@ -47,8 +9,8 @@ let users_info:Array<user> = [
 		<h2 class="share-title">Share Your Moments!</h2>
 	</div>
 	<div class="elements-container">
-		<div class="elements" v-for="user in users_info" :key="user.user_id">
-			<post  :usuario="user"/>
+		<div class="elements" v-for="{user_id} in users_info" :key="user_id">
+			<post :usuario="user_id"/>
 		</div>
 	</div>
 </template>
