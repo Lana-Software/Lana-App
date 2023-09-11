@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import post from "../components/component_post.vue";
-import { users_info } from "./users_info";
-
+	import component_post from "../components/component_post.vue";
+	import { users_info } from "./users_info";
 </script>
 
 <template>
@@ -10,7 +9,7 @@ import { users_info } from "./users_info";
 	</div>
 	<div class="posts-container">
 		<div class="post-element" v-for="(user, i) in users_info" :id="'post'+i" :key="'post'+i">
-			<post :usuario="user.user_id"/>
+			<component_post :userinfo="user"/>
 		</div>
 	</div>
 </template>

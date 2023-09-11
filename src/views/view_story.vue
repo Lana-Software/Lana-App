@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import component_history from '../components/component_story.vue';
 import { users_info } from "./users_info";
+import component_history from '../components/component_story.vue';
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import { users_info } from "./users_info";
     </div>
     <div class="stories-container">
         <div class="story-element" v-for="(user, i) in users_info" :id="'story'+i" :key="'story'+i">
-            <component_history :usuario="user.user_id"/>
+            <component_history :userinfo="user"/> 
         </div>
     </div>
 </template>
