@@ -28,10 +28,19 @@ import component_history from '../components/component_story.vue';
     }
 
     .story-element {
-        flex: 0 0 280px;
+        max-width: 225px;
+        min-width: 150px;
+        flex: 0 0 40vw;
         box-sizing: border-box;
         scroll-snap-align: center;
         margin: 0 auto;
         padding: 5px 10px;
     }
+/* 
+    .story-element ::before {
+        content: 'HOLA PERRA';
+        color: blueviolet;
+        width: 225px;
+    } */
+
 </style>

@@ -34,7 +34,7 @@
 
 <style scoped>
     .post-container, .image {
-        width: 150px;
+        width: 100%;
         height: 230px;
         background-color: var(--alter-color-two);
     }
@@ -44,7 +44,7 @@
         border-radius: 24px;
         position: relative;
     }
-
+    
     .image > img {
         border-radius: 24px 24px 0 0;
         width: 100%;
@@ -68,7 +68,6 @@
 
     .profile > img  {
         width: 100%;
-        height: 100%;
         border-radius: 50%;
     }
 

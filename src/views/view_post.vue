@@ -23,6 +23,9 @@
 }
 
 .post-element {
+	max-width: 160px;
+	min-width: 150px;
+	flex: 0 0 40vw;
 	padding: 5px 10px;
 }
 </style>
