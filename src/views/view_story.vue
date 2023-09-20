@@ -29,7 +29,7 @@ import component_history from '../components/component_story.vue';
 
     .story-element {
         max-width: 225px;
-        min-width: 150px;
+        min-width: 200px;
         flex: 0 0 40vw;
         box-sizing: border-box;
         scroll-snap-align: center;

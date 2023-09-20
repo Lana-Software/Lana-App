@@ -12,7 +12,7 @@
 <template>
     <div class="story-container">
         <div class="image">
-            <img src="dateunvlog.jpg" alt="">
+            <img src="/dateunvlog.jpg" alt="">
         </div>
         <div class="elements">
             <div class="circle" id="circle">
