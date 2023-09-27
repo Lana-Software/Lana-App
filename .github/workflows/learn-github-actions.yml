@@ -2,7 +2,7 @@ name: learn-github-actions
 run-name: ${{ github.actor }} La esta cagando
 on: [push]
 jobs:
-  check-bats-version:
+  test-by-the-way:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
