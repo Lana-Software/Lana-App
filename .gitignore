@@ -169,3 +169,5 @@ vscode/launch.json
 # Recommended template: Node.gitignore
 dist-ss
 *.local
+
+html/
