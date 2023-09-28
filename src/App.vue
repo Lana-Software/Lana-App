@@ -8,7 +8,6 @@ import index_history from "./views/view_history.vue";
 	<index_navbar />
 	<index_posts />
 	<index_history />
-
 </template>
 
 <style scoped></style>

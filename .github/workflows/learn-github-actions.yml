@@ -1,14 +1,20 @@
-name: learn-github-actions
+name: Test and Deploy (si tubiera) 
 run-name: ${{ github.actor }} La esta cagando
-on: [push]
+
+on:
+  push:
+    branches: 
+      - main
+
 jobs:
-  check-bats-version:
+  test-my-eggs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version: '14'
-      - name: Soy un jenio
-        run: |
-          echo "Hola puto"
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm test
