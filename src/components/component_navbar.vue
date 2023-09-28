@@ -8,7 +8,7 @@
       <h1 class="lana-title"> Lana </h1>
     </div>
     <div class="buttons">
-      <a href="#" class="login">Log in </a><span> or </span>
+      <a href="#" class="login">Sign In</a><span> or </span>
       <button class="register-button"> Register </button> 
     </div>
   </div>

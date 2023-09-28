@@ -1,27 +1,31 @@
 <script setup lang="ts">
-    // import { VueElement } from 'vue';
+    import type { user } from '../views/user';
 
-    let total_likes:number = 443
-    let total_comments:number = 120
+    const props = defineProps<{
+        userinfo: user
+    }>()
+    
+    const userinfo = props.userinfo
+    let postinfo = props.userinfo.recent_post
 </script>
 
 <template>
-	<div class="background row">
+	<div class="post-container">
         <div class="image">
-            <img src="porsche.jpg" alt="">
+            <img :src="postinfo.image" alt="post background image">
         </div>
         <div class="circle">
             <div class="profile">
-                <img src="profile.jpg" alt="">
+                <img :src="userinfo.user_profile" alt="profile picture">
             </div>
         </div>
         <div class="icons">
             <div class="container-heart">
                 <fa icon="fa-regular fa-heart" class="icon" style="color: #7661e8;" />
-                <span class="likes">{{ total_likes }}</span>
+                <span class="likes">{{ postinfo.likes }}</span>
             </div>
             <div class="container-comment">
-                <span class="comments">{{ total_comments }}</span>
+                <span class="comments">{{ postinfo.comments }}</span>
                 <fa icon="fa-regular fa-comment" class="icon" style="color: #7661e8;" />
             </div>
         </div>
@@ -29,18 +33,18 @@
 </template>
 
 <style scoped>
-    .background, .image {
-        width: 150px;
+    .post-container, .image {
+        width: 100%;
         height: 230px;
         background-color: var(--alter-color-two);
     }
 
-    .background {
+    .post-container {
         box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
         border-radius: 24px;
         position: relative;
     }
-
+    
     .image > img {
         border-radius: 24px 24px 0 0;
         width: 100%;
@@ -64,7 +68,6 @@
 
     .profile > img  {
         width: 100%;
-        height: 100%;
         border-radius: 50%;
     }
 
@@ -78,5 +81,5 @@
     }
 
     .icon { padding: 0 4.5px; }
-
+    
 </style>
