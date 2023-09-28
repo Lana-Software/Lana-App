@@ -8,7 +8,6 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "start": "vite",
-    "deploy": "gh-pages -d dist"
     "test": "vitest"
   },
   "dependencies": {
@@ -17,7 +16,6 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
-    "gh-pages": "^6.0.0",
     "@supabase/supabase-js": "^2.36.0",
     "happy-dom": "^12.2.0",
     "pinia": "^2.0.35",
@@ -29,8 +27,8 @@
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2",
-    "typescript": "^5.2.2",
-    "vite": "^4.4.9",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.0",
     "vitest": "^0.34.5",
     "vue-tsc": "^1.2.0"
   }
