@@ -171,3 +171,9 @@ dist-ss
 *.local
 
 html/
+
+# Putas imagenes de mierda
+*.png
+*.jpeg
+*.jpg
+*.gif
