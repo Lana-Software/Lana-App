@@ -3,7 +3,7 @@
  */
 import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
-import ToTest from './component_totest.vue';
+import ToTest from '../components/component_totest.vue';
 
 describe('ToTest', () => {
 	it('should render ToTest', () => {
