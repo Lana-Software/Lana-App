@@ -3,18 +3,16 @@
  */
 import { describe, it, expect, test } from "vitest";
 import { mount } from "@vue/test-utils";
-import Story from "../../views/view_story.vue";
-// import Navbar from './component_navbar.vue';
-// import component_navbarVue from "../component_navbar.vue";
+import Story from "../views/view_story.vue";
 
-describe('stories view', () => {
-    it('renders stories container', () =>{
+describe('Rendering', () => {
+    it('Renders storie container', () =>{
         const wrapper = mount(Story);
         // Main Container exists
         expect(wrapper.find('.story-container').exists()).toBeTruthy();
     });
 
-    it('renders stories image', () =>{
+    it('Renders storie image', () =>{
         const wrapper = mount(Story);
         // Story image container exists
         expect(wrapper.find('.image').exists()).toBeTruthy();
@@ -23,8 +21,3 @@ describe('stories view', () => {
 
     });
 });
-
-test('suma', ()=> {
-    expect(2+2).toEqual(4)
-})
-
