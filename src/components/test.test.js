@@ -14,6 +14,7 @@ describe('ToTest', () => {
 		expect(wrapper.find('input[type="text"]').exists()).toBeTruthy();
 		// has button
 		expect(wrapper.find('button').exists()).toBeTruthy();
+
 		// expect(wrapper.html()).toMatchSnapshot();
 	});
 	it('should change the text when button is clicked', async () => {
