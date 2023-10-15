@@ -1,7 +1,10 @@
-# :stars: Lana App™
- 
-<section align="center">
-    <img src="https://media1.giphy.com/media/26gssIytJvy1b1THO/giphy.gif?cid=ecf05e47wtmxioxpv777nw4hynhthg4vye2htn2j62bgb5az&rid=giphy.gif&ct=g" style="width:250px;" title="welcome my dude">
+# :stars: Lana App™ <img alt="alpha" src="https://img.shields.io/badge/WIP-orange" align="center">
+
+
+<section align="center">	
+<img alt="Build Status" src="https://github.com/Lana-Software/Lana-App/actions/workflows/pipeline.yml/badge.svg?branchName=main">
+<br>
+<img src="https://i.giphy.com/media/26gssIytJvy1b1THO/giphy.webp" style="width:250px;" title="welcome my dude">
 </section>
 
 <section align="center">
@@ -15,8 +18,6 @@
     <img src="https://img.shields.io/github/followers/JohnGolgota?label=JohnGolgota&logo=github&logoColor=red&style=for-the-badge" alt="Developer 3">
   </a>
 </section>
-
-# About Lana
 
 This platform is the perfect place for those who want to share their most important moments, videos, and art with other users. Additionally, our unique artificial intelligence function has its own account that makes posts based on other users' posts, offering a personalized and unique experience for each user. Additionally, our platform is designed to showcase users' art and videos, offering a visually stunning and unique experience.
 
