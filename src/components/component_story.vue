@@ -1,6 +1,6 @@
 <script setup lang="ts">
     import { user } from '../views/user';
-    import { getRandomInt } from '../../public/ts/utilities'
+    import { getRandomInt } from '../ts/utilities'
     const myElementById: HTMLElement | null = document.getElementById('img');
     myElementById?.addEventListener('click', () => {
         console.log("Si linea 5 component_story.vue");

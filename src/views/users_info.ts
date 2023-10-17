@@ -1,5 +1,5 @@
 import { user } from "./user";
-import {getRandomStr, getRandomInt, getRandomColor} from "../../public/ts/utilities";
+import {getRandomStr, getRandomInt, getRandomColor} from "../ts/utilities";
 
 let imgid = 0
 
