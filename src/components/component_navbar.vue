@@ -22,6 +22,7 @@
     box-shadow: 0 -1px 8px 0 #000000;
     padding: 7px 0px;
     height: 43px;
+    margin: 0;
   }
 
   .title {
