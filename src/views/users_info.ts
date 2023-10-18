@@ -1,14 +1,12 @@
 import { user } from "./user";
+import {getRandomStr, getRandomInt, getRandomColor} from "../ts/utilities";
 
 let imgid = 0
-function getRandomInt(num:number){
-    return Math.floor(Math.random() * num + (num/1.5))
-}
 
 export let users_info: Array<user> = [
     {
         user_id: 100199001,
-        user_profile: 'jhonny_pfp.png',
+        user_profile: 'https://api.dicebear.com/7.x/notionists/svg?scale=150&backgroundType=gradientLinear,solid&backgroundColor=' + getRandomColor() + ',' + getRandomColor() + '&seed=' + getRandomStr(9),
         recent_post: {
             likes: getRandomInt(999),
             comments: getRandomInt(499.5),
@@ -17,7 +15,7 @@ export let users_info: Array<user> = [
     },
     {
         user_id: 100199002,
-        user_profile: 'jojopuppy1.jpg',
+        user_profile: 'https://api.dicebear.com/7.x/initials/svg?seed=' + getRandomStr(2),
         recent_post: {
             likes: getRandomInt(999),
             comments: getRandomInt(499.5),
@@ -26,7 +24,7 @@ export let users_info: Array<user> = [
     },
     {
         user_id: 100199003,
-        user_profile: 'jojopuppy2.png',
+        user_profile: 'https://api.dicebear.com/7.x/notionists/svg?scale=150&backgroundType=gradientLinear,solid&backgroundColor=' + getRandomColor() + ',' + getRandomColor() + '&seed=' + getRandomStr(9),
         recent_post: {
             likes: getRandomInt(999) ,
             comments: getRandomInt(499.5),
@@ -35,7 +33,7 @@ export let users_info: Array<user> = [
     },
     {
         user_id: 100199004,
-        user_profile: 'jojopuppy3.jpg',
+        user_profile: 'https://api.dicebear.com/7.x/initials/svg?seed=' + getRandomStr(2),
         recent_post: {
             likes: getRandomInt(999),
             comments: getRandomInt(499.5),
@@ -44,7 +42,7 @@ export let users_info: Array<user> = [
     },
     {
         user_id: 100199005,
-        user_profile: 'jojopuppy4.png',
+        user_profile: 'https://api.dicebear.com/7.x/notionists/svg?scale=150&backgroundType=gradientLinear,solid&backgroundColor=' + getRandomColor() + ',' + getRandomColor() + '&seed=' + getRandomStr(9),
         recent_post: {
             likes: getRandomInt(999),
             comments: getRandomInt(499.5),
@@ -53,7 +51,7 @@ export let users_info: Array<user> = [
     },
     {
         user_id: 100199006,
-        user_profile: 'manzanagato.png',
+        user_profile: 'https://api.dicebear.com/7.x/initials/svg?seed=' + getRandomStr(2),
         recent_post: {
             likes: getRandomInt(999) ,
             comments: getRandomInt(499.5),

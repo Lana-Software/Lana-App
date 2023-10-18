@@ -4,7 +4,6 @@
 import { describe, expect, test } from "vitest";
 import { mount } from "@vue/test-utils";
 import NavBar from "../components/component_navbar.vue";
-// import { getValue } from "webdriverio/build/commands/element";
 
 describe('Rendering', () => {
     test('Renders navbar container', () =>{
