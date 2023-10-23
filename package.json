@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "start": "vite",
     "deploy": "gh-pages -d dist",
-    "test": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "test": "vitest"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
