@@ -9,7 +9,7 @@
     padding: 0;
 
     /* Las variaciones de temas que tiene en cuenta la aplicacion de forma automatica */
-    color-scheme: light dark;
+    color-scheme: light;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
