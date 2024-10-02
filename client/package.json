@@ -1,11 +1,11 @@
 {
-  "name": "lana-app",
+  "name": "client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "start": "vite",
     "deploy": "gh-pages -d dist",
