@@ -1,44 +1,27 @@
 {
-  "name": "lana-app",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "Lana-App",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview",
-    "start": "vite",
-    "deploy": "gh-pages -d dist",
-    "test:ui": "vitest --ui",
-    "test": "vitest"
+    "start": "ts-node-dev server/index.ts"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-brands-svg-icons": "^6.4.0",
-    "@fortawesome/free-regular-svg-icons": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@fortawesome/vue-fontawesome": "^3.0.3",
-    "@supabase/supabase-js": "^2.36.0",
-    "gh-pages": "^6.0.0",
-    "happy-dom": "^12.2.0",
+    "@fastify/cors": "^10.0.1",
+    "@fastify/static": "^8.0.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^5.0.0",
     "mongodb": "^6.9.0",
-    "pinia": "^2.0.35",
-    "vue": "^3.2.47",
-    "vue-router": "^4.4.5"
+    "typescript": "^5.6.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.1.0",
-    "@vitest/browser": "^0.34.5",
-    "@vitest/ui": "^0.34.5",
-    "@vue/test-utils": "^2.4.1",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.23",
-    "tailwindcss": "^3.3.2",
-    "typescript": "^5.2.2",
-    "vite": "^4.4.9",
-    "vite-plugin-node-polyfills": "^0.22.0",
-    "vitest": "^0.34.5",
-    "vue-tsc": "^1.2.0",
-    "webdriverio": "^8.16.15"
-  }
+    "@types/node": "^22.7.4",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0"
+  },
+  "packageManager": "pnpm@8.15.5+sha1.a58c038faac410c947dbdb93eb30994037d0fce2"
 }

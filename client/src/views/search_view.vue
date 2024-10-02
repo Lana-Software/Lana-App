@@ -1,6 +1,6 @@
 <script setup lang="ts">
-	import * as db from '../db/mongo'
-	db.run()
+	//import * as db from '../db/mongo'
+	//db.run()
 </script>
 <template>
 	<div>
