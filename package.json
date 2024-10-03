@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev server/index.ts"
+    "start": "ts-node-dev server/index.ts",
+    "test": "vitest",
+    "test:commit": "echo \"Error: no test specified\" && exit 0"
   },
   "keywords": [],
   "author": "",
@@ -18,10 +20,24 @@
     "mongodb": "^6.9.0",
     "typescript": "^5.6.2"
   },
+  "lint-staged": {
+    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+      "biome check --write --no-errors-on-unmatched"
+    ]
+  },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.3",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "@types/node": "^22.7.4",
+    "lefthook": "^1.7.18",
+    "lint-staged": "^15.2.10",
     "ts-node": "^10.9.2",
-    "ts-node-dev": "^2.0.0"
+    "ts-node-dev": "^2.0.0",
+    "vitest": "^2.1.2"
+  },
+  "exports": {
+    "./biome": "./biome.json"
   },
   "packageManager": "pnpm@8.15.5+sha1.a58c038faac410c947dbdb93eb30994037d0fce2"
 }
