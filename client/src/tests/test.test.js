@@ -1,26 +1,26 @@
+import { mount } from "@vue/test-utils";
 /**
  * @vitest-environment happy-dom
  */
-import { describe, it, expect } from 'vitest';
-import { mount } from '@vue/test-utils';
-import ToTest from '../components/component_totest.vue';
+import { describe, expect, it } from "vitest";
+import ToTest from "../components/component_totest.vue";
 
-describe('ToTest', () => {
-	it('should render ToTest', () => {
+describe("ToTest", () => {
+	it("should render ToTest", () => {
 		const wrapper = mount(ToTest);
 		//  has h1
-		expect(wrapper.find('h1').exists()).toBeTruthy();
+		expect(wrapper.find("h1").exists()).toBeTruthy();
 		// has input text
 		expect(wrapper.find('input[type="text"]').exists()).toBeTruthy();
 		// has button
-		expect(wrapper.find('button').exists()).toBeTruthy();
+		expect(wrapper.find("button").exists()).toBeTruthy();
 
 		// expect(wrapper.html()).toMatchSnapshot();
 	});
-	it('should change the text when button is clicked', async () => {
+	it("should change the text when button is clicked", async () => {
 		const wrapper = mount(ToTest);
-		await wrapper.find('input[type="text"]').setValue('clicked');
-		await wrapper.find('button').trigger('click');
-		expect(wrapper.find('h1').text()).toEqual('clicked');
+		await wrapper.find('input[type="text"]').setValue("clicked");
+		await wrapper.find("button").trigger("click");
+		expect(wrapper.find("h1").text()).toEqual("clicked");
 	});
 });

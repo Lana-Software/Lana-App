@@ -1,12 +1,12 @@
 <script setup lang="ts">
-    import type { user } from '../views/user';
+import type { user } from "../views/user";
 
-    const props = defineProps<{
-        userinfo: user
-    }>()
-    
-    const userinfo = props.userinfo
-    let postinfo = props.userinfo.recent_post
+const props = defineProps<{
+	userinfo: user;
+}>();
+
+const userinfo = props.userinfo;
+let postinfo = props.userinfo.recent_post;
 </script>
 
 <template>

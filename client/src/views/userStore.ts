@@ -1,51 +1,36 @@
-
 import { defineStore } from "pinia";
 import { users_info } from "./users_info"; // users array
 
-export const useUserStore = defineStore("user", { // user
-    state:() => {
-        return { 
-            userarray: users_info,
-        }
-    },
-    // getters: {
+export const useUserStore = defineStore("user", {
+	state: () => {
+		return {
+			userarray: users_info,
+		};
+	},
+	actions: {
+		getuser() {
+			return this.userarray;
+		},
 
-    // }
-    // ,
-    actions: {
-        getuser (){
-            return this.userarray;
-        },
+		getUserRecentPost() {
+			const user = this.userarray[0];
+			const recentpost = user.recent_post;
+			return recentpost;
+		},
 
-        getUserRecentPost (){ // que buscas loco?
-            for (let i = 0; i < this.userarray.length; i++) {
-                let user = this.userarray[i];
-                let recentpost = user.recent_post;
-                return recentpost
-            }
+		getUserRecentPostLikes() {
+			const recen = this.getUserRecentPost();
+			return recen?.likes;
+		},
 
-        },
-        
-        getUserRecentPostLikes (){ // no entiendo una monda
-            for (let i = 0; i < this.userarray.length; i++) {
-                let recen = this.getUserRecentPost()
-                return recen?.likes
-            }
-        },
+		getUserRecentPostComments() {
+			const recen = this.getUserRecentPost();
+			return recen?.comments;
+		},
 
-        getUserRecentPostComments (){ // no entiendo una monda
-            for (let i = 0; i < this.userarray.length; i++) {
-                let recen = this.getUserRecentPost()
-                return recen?.comments
-            }
-        },
-
-        getUserPfp (){
-            for (let i = 0; i < this.userarray.length; i++) {
-                let recen = this.getUserRecentPost()
-                return recen?.image.toString()
-            }
-        }
-
-    }
-})
+		getUserPfp() {
+			const recen = this.getUserRecentPost();
+			return recen?.image.toString();
+		},
+	},
+});

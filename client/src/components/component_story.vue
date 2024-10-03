@@ -1,14 +1,14 @@
 <script setup lang="ts">
-    import { user } from '../views/user';
-    import { getRandomInt } from '../ts/utilities'
-    const myElementById: HTMLElement | null = document.getElementById('img');
-    myElementById?.addEventListener('click', () => {
-        console.log("Si linea 5 component_story.vue");
-    })
+import { user } from "../views/user";
+import { getRandomInt } from "../ts/utilities";
+const myElementById: HTMLElement | null = document.getElementById("img");
+myElementById?.addEventListener("click", () => {
+	console.log("Si linea 5 component_story.vue");
+});
 
-    const props = defineProps<{ userinfo: user }>()
-    const userinfo = props.userinfo
-    const imgplaceholderurl = 'https://picsum.photos/200/300?random='
+const props = defineProps<{ userinfo: user }>();
+const userinfo = props.userinfo;
+const imgplaceholderurl = "https://picsum.photos/200/300?random=";
 </script>
 
 <template>

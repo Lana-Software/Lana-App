@@ -1,6 +1,6 @@
 <script setup lang="ts">
-	import component_post from "../components/component_post.vue";
-	import { users_info } from "./users_info";
+import component_post from "../components/component_post.vue";
+import { users_info } from "./users_info";
 </script>
 
 <template>
