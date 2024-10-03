@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { users_info } from "./users_info";
-import component_history from '../components/component_story.vue';
+import component_history from "../components/component_story.vue";
 </script>
 
 <template>
