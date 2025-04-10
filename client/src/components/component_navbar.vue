@@ -16,35 +16,42 @@ const submitQuery = (e: Event) => {
 </script>
 
 <template>
-  <div class="content">
-    <div class="title">
-      <a href="/" class="unformatted-link"><h1 class="lana-title"> Lana </h1></a>
-    </div>
-    <div class="search">
-      <form @submit.prevent="submitQuery">
-        <input type="text" class="search-bar" v-model="query">
-        <button type="submit" class="search-btn">
-          <fa :icon="['fas', 'magnifying-glass']" />
-        </button>
-      </form>
-    </div>
-    <div class="buttons">
-      <a href="#" class="login link">Sign In</a><span> or </span>
-      <button class="register-button"> Register </button> 
-    </div>
-  </div>
+	<div class="content">
+		<div class="title">
+			<a href="/" class="unformatted-link">
+				<h1 class="lana-title"> Lana </h1>
+			</a>
+		</div>
+		<div class="search">
+			<form @submit.prevent="submitQuery">
+				<input type="text" class="search-bar" v-model="query" aria-label="Search">
+				<button type="submit" class="search-btn" aria-label="Search">
+					<fa :icon="['fas', 'magnifying-glass']" />
+				</button>
+			</form>
+		</div>
+		<div class="buttons">
+			<a href="#" class="login link">Sign In</a><span> or </span>
+			<button class="register-button"> Register </button>
+		</div>
+		<div class="burger-menu" hidden>
+			<button type="button" class="burger-button" @click="$emit('toggle-menu')">
+				<fa :icon="['fas', 'bars']" />
+			</button>
+		</div>
+	</div>
 </template>
 
 <style scoped>
-  .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 -1px 8px 0 #000000;
-    padding: 7px 0px;
-    height: 43px;
-    margin: 0;
-  }
+.content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 -1px 8px 0 #000000;
+	padding: 7px 0px;
+	height: 43px;
+	margin: 0;
+}
 
 .title {
 	margin-left: 19px;
@@ -83,11 +90,11 @@ const submitQuery = (e: Event) => {
 	border: none;
 }
 
-.buttons {
+.buttons, .burger-menu {
 	margin-right: 19px;
 }
 
-.register-button {
+.register-button, .burger-button {
 	width: 80px;
 	height: 27px;
 	border: none;
@@ -134,5 +141,15 @@ span {
 	color: initial;
 }
 
-
+@media (max-width: 600px) {
+	.search {
+		display: none;
+	}
+	.buttons {
+		display: none;
+	}
+	.burger-menu {
+		display: flex;
+	}
+}
 </style>
