@@ -1,50 +1,30 @@
-import { MongoClient, ServerApiVersion } from "mongodb";
+import { MongoClient } from "mongodb";
 import * as dotenv from 'dotenv'
-import { dot } from "node:test/reporters";
-import { Collection } from "mongodb";
-import { Db } from "mongodb";
-
-export const collections: { characters?: Collection } = {}
-
-// TODO: Remove this, its not being used anywhere
-export async function connectToDatabase() {
-  dotenv.config()
-
-  const mongodb_key = process.env.MONGODB_KEY;
-  const uri = "mongodb+srv://" + mongodb_key + "@cluster0.gtmhwde.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-
-  const client: MongoClient = new MongoClient(uri, {
-    serverApi: {
-      version: ServerApiVersion.v1,
-      strict: true,
-      deprecationErrors: true,
-    }
-  })
-
-  await client.connect()
-
-  const db: Db = client.db("wayofkings_info")
-
-  const characters_collection: Collection = db.collection("characters");
-  collections.characters = characters_collection
-}
 
 export async function run(query: string) {
-  dotenv.config()
+	// Load environment variables from .env file
+	dotenv.config()
 
-  const mongodb_key = process.env.MONGODB_KEY;
-  const uri = "mongodb+srv://" + mongodb_key + "@cluster0.gtmhwde.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+	// Get the MongoDB connection token (user:password) from environment variables
+	const mongodb_key = process.env.MONGODB_KEY;
+	const uri = "mongodb+srv://" + mongodb_key + "@cluster0.gtmhwde.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-  const client = new MongoClient(uri)
+	const client = new MongoClient(uri)
 
-  try {
-    const db = client.db("wayofkings_info")
-    const characters_collection = db.collection("characters");
-    const queryArgs = { name: { $regex: query } };
-    const response = await characters_collection.find(queryArgs).toArray()
-    return response
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
+	try {
+		//Define database and collection to use
+		const db = client.db("lana_app_db")
+		const users_collection = db.collection("users");
+
+		// Define the query for the search
+		const queryArgs = { name: { $regex: query } };
+
+		// Find all users that match the query and sort them by name in ascending order (1)
+		// The $regex operator is used to perform a case-insensitive search
+		const response = await users_collection.find(queryArgs).sort({ name: 1 }).toArray()
+		return response
+	} finally {
+		// Ensures that the client will close when you finish/error
+		await client.close();
+	}
 }
