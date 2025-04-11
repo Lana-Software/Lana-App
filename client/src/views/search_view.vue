@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useCharactersStore } from '../store/characters'
+import { useUsersStore } from '../store/users'
 
-const charactersStore = useCharactersStore()
+const usersStore = useUsersStore()
 </script>
 
 <template>
@@ -10,11 +10,11 @@ const charactersStore = useCharactersStore()
             <h2 class="title">Search results</h2>
         </div>
         <div class="results-container">
-            <div class="search_result_item" v-for="(character, i) in charactersStore.characters" :key="'character' + i">
+            <div class="search_result_item" v-for="(user, i) in usersStore.getUsers" :key="'user_' + i">
                 <div class="crop">
-                    <img :src="character.img" alt="">
+                    <img :src="user.profile_picture" alt="">
                 </div>
-                <div class="username">@{{ character.name }}</div>
+                <div class="username">@{{ user.name }}</div>
             </div>
         </div>
     </div>

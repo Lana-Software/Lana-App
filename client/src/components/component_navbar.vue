@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { useCharactersStore } from '../store/characters'
+import { useUsersStore } from '../store/users'
 import { useRouter } from 'vue-router'
 import { ref } from 'vue'
 
-const charactersStore = useCharactersStore()
+const usersStore = useUsersStore()
 
 const router = useRouter()
 
 const query = ref('')
 const submitQuery = (e: Event) => {
 	e.preventDefault()
-	charactersStore.searchCharacters(query.value)
-	router.push({ name: 'Search', params: { query: query.value } })
+	usersStore.searchUsers(query.value)
+	router.push({ name: 'Search', query: { q: query.value } })
 }
 </script>
 
