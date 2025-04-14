@@ -14,7 +14,8 @@
 		"sourceMap": true
 	},
 	"include": [
-		"src/**/*"
+		"./client/src/**/*",
+		"./server/**/*"
 	],
 	"exclude": [
 		"node_modules"
