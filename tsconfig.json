@@ -3,7 +3,7 @@
 		"lib": [
 			"es5",
 			"es6",
-      "DOM"
+			"DOM"
 		],
 		"target": "es5",
 		"module": "commonjs",
