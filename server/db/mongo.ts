@@ -1,54 +1,30 @@
-import * as dotenv from "dotenv";
-import { MongoClient, ServerApiVersion } from "mongodb";
-import type { Collection } from "mongodb";
-import type { Db } from "mongodb";
-
-export const collections: { characters?: Collection } = {};
-
-export async function connectToDatabase() {
-	dotenv.config();
-	const uri = process.env.DB_CONN_STRING;
-	if (!uri) {
-		throw new Error("[DB] No connection string found");
-	}
-	const client: MongoClient = new MongoClient(uri, {
-		serverApi: {
-			version: ServerApiVersion.v1,
-			strict: true,
-			deprecationErrors: true,
-		},
-	});
-
-	await client.connect();
-
-	const db: Db = client.db("wayofkings_info");
-
-	const characters_collection: Collection = db.collection("characters");
-	collections.characters = characters_collection;
-}
+import { MongoClient } from "mongodb";
+import * as dotenv from 'dotenv'
 
 export async function run(query: string) {
-	dotenv.config();
+	// Load environment variables from .env file
+	dotenv.config()
 
-	const uri = process.env.DB_CONN_STRING;
-	if (!uri) {
-		throw new Error("[DB] No connection string found");
-	}
-	const client = new MongoClient(uri);
+	// Get the MongoDB connection token (user:password) from environment variables
+	const mongodb_key = process.env.MONGODB_KEY;
+	const uri = "mongodb+srv://" + mongodb_key + "@cluster0.gtmhwde.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+	const client = new MongoClient(uri)
 
 	try {
-		const db = client.db("wayofkings_info");
-		const characters_collection = db.collection("characters");
-		const queryArgs = { name: query };
-		const response = await characters_collection.findOne(queryArgs);
-		return response;
+		//Define database and collection to use
+		const db = client.db("lana_app_db")
+		const users_collection = db.collection("users");
+
+		// Define the query for the search
+		const queryArgs = { name: { $regex: query } };
+
+		// Find all users that match the query and sort them by name in ascending order (1)
+		// The $regex operator is used to perform a case-insensitive search
+		const response = await users_collection.find(queryArgs).sort({ name: 1 }).toArray()
+		return response
 	} finally {
 		// Ensures that the client will close when you finish/error
 		await client.close();
 	}
-}
-
-export async function run2(query: string) {
-	dotenv.config();
-	const client = "";
 }
