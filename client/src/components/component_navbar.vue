@@ -12,6 +12,17 @@ const submitQuery = (e: Event) => {
 	e.preventDefault()
 	usersStore.searchUsers(query.value)
 	router.push({ name: 'Search', query: { q: query.value } })
+
+	// Close the dialog manually since we're preventing the default form submission
+	const dialog = document.getElementById('search-dialog') as HTMLDialogElement
+	if (dialog) {
+		dialog.close()
+	}
+}
+
+const openSearchModal = () => {
+	const dialog = document.getElementById('search-dialog') as HTMLDialogElement
+	dialog.showModal()
 }
 </script>
 
@@ -19,10 +30,10 @@ const submitQuery = (e: Event) => {
 	<div class="content">
 		<div class="title">
 			<a href="/" class="unformatted-link">
-				<h1 class="lana-title"> Lana </h1>
+				<h1 class="lana-title">Lana</h1>
 			</a>
 		</div>
-		<div class="search">
+		<div class="search" id="search_big_screen">
 			<form @submit.prevent="submitQuery">
 				<input type="text" class="search-bar" v-model="query" aria-label="Search">
 				<button type="submit" class="search-btn" aria-label="Search">
@@ -34,10 +45,27 @@ const submitQuery = (e: Event) => {
 			<a href="#" class="login link">Sign In</a><span> or </span>
 			<button class="register-button"> Register </button>
 		</div>
-		<div class="burger-menu" hidden>
-			<button type="button" class="burger-button" @click="$emit('toggle-menu')">
-				<fa :icon="['fas', 'bars']" />
+		<div class="small-screen-buttons" hidden>
+
+			<button id="mini-search-btn" @click="openSearchModal()" aria-label="Search">
+				<fa :icon="['fas', 'magnifying-glass']" />
 			</button>
+
+			<dialog id="search-dialog" closedby="any" openedby="mini-search-btn">
+				<div class="search" id="search_small_screen">
+					<form method="dialog" @submit.prevent="submitQuery">
+						<input type="text" class="search-bar" v-model="query" aria-label="Search">
+						<button type="submit" class="search-btn" aria-label="Search">
+							<fa :icon="['fas', 'magnifying-glass']" />
+						</button>
+					</form>
+				</div>
+			</dialog>
+			<div class="burger-menu">
+				<button type="button" class="burger-button" @click="$emit('toggle-menu')">
+					<fa :icon="['fas', 'bars']" />
+				</button>
+			</div>
 		</div>
 	</div>
 </template>
@@ -58,8 +86,17 @@ const submitQuery = (e: Event) => {
 	color: var(--secondary-color);
 }
 
+#search-dialog {
+	justify-self: center;
+	align-self: center;
+	border-radius: 24px;
+}
+
 .search {
 	flex: 1 1 content;
+}
+
+#search_big_screen {
 	max-width: 40%;
 }
 
@@ -88,13 +125,17 @@ const submitQuery = (e: Event) => {
 	width: 35px;
 	height: 100%;
 	border: none;
+	border-radius: 24px;
 }
 
-.buttons, .burger-menu {
+.buttons,
+.small-screen-buttons {
 	margin-right: 19px;
 }
 
-.register-button, .burger-button {
+.register-button,
+#mini-search-btn,
+.burger-button {
 	width: 80px;
 	height: 27px;
 	border: none;
@@ -102,15 +143,15 @@ const submitQuery = (e: Event) => {
 	color: var(--alter-color-two);
 	padding: 5px;
 	background-color: var(--primary-color);
-}
-
-.register-button:hover {
-	background-color: #614ae6;
+	cursor: pointer;
 	transition: 0.4s;
+
 }
 
-.register-button:not(:hover) {
-	background-color: (--alter-color-two);
+.register-button:hover,
+#mini-search-btn:hover,
+.burger-button:hover {
+	background-color: #614ae6;
 	transition: 0.4s;
 }
 
@@ -142,14 +183,17 @@ span {
 }
 
 @media (max-width: 600px) {
-	.search {
+	#search_big_screen {
 		display: none;
 	}
+
 	.buttons {
 		display: none;
 	}
-	.burger-menu {
+
+	.small-screen-buttons {
 		display: flex;
+		gap: 10px;
 	}
 }
 </style>
