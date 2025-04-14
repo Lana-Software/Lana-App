@@ -1,5 +1,5 @@
 {
-  "name": "lana-app",
+  "name": "lana-app-client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -20,8 +20,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@supabase/supabase-js": "^2.36.0",
     "gh-pages": "^6.0.0",
-    "happy-dom": "^12.2.0",
-    "mongodb": "^6.9.0",
+    "happy-dom": "^15.10.2",
     "pinia": "^2.0.35",
     "vue": "^3.2.47",
     "vue-router": "^4.4.5"
@@ -35,7 +34,7 @@
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.6.2",
-    "vite": "^4.4.9",
+    "vite": "^4.5.12",
     "vite-plugin-node-polyfills": "^0.22.0",
     "vitest": "^0.34.5",
     "vue-tsc": "^1.2.0",
