@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev server/index.ts"
+    "start": "ts-node-dev server/index.ts",
+    "test": "vitest",
+    "test:commit": "echo \"Error: no tests defined yet\" && exit 0"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +22,10 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@types/node": "^22.7.4",
+    "lefthook": "^1.11.10",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0"
   },
