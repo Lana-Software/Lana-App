@@ -8,21 +8,19 @@ const usersStore = useUsersStore()
 const router = useRouter()
 
 const query = ref('')
+const dialog = ref<HTMLDialogElement | null>(null)
+
 const submitQuery = (e: Event) => {
 	e.preventDefault()
 	usersStore.searchUsers(query.value)
 	router.push({ name: 'Search', query: { q: query.value } })
 
 	// Close the dialog manually since we're preventing the default form submission
-	const dialog = document.getElementById('search-dialog') as HTMLDialogElement
-	if (dialog) {
-		dialog.close()
-	}
+	dialog.value?.close()
 }
 
 const openSearchModal = () => {
-	const dialog = document.getElementById('search-dialog') as HTMLDialogElement
-	dialog.showModal()
+	dialog.value?.showModal()
 }
 </script>
 
@@ -51,7 +49,7 @@ const openSearchModal = () => {
 				<fa :icon="['fas', 'magnifying-glass']" />
 			</button>
 
-			<dialog id="search-dialog" closedby="any" openedby="mini-search-btn">
+			<dialog ref="dialog" id="search-dialog" closedby="any" openedby="mini-search-btn">
 				<div class="search" id="search_small_screen">
 					<form method="dialog" @submit.prevent="submitQuery">
 						<input type="text" class="search-bar" v-model="query" aria-label="Search">

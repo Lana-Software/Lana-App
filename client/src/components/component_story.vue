@@ -1,10 +1,10 @@
 <script setup lang="ts">
-    import { user } from '../views/user';
+    import type { user } from '../views/user';
     import { getRandomInt } from '../ts/utilities'
-    const myElementById: HTMLElement | null = document.getElementById('img');
-    myElementById?.addEventListener('click', () => {
-        console.log("Si linea 5 component_story.vue");
-    })
+
+	const checkClick = () => {
+		console.log("Si linea 3 component_story.vue");
+	}
 
     const props = defineProps<{ userinfo: user }>()
     const userinfo = props.userinfo
@@ -14,7 +14,7 @@
 <template>
     <div class="story-container">
         <div class="image">
-            <img :src="imgplaceholderurl + getRandomInt(9)" alt="">
+            <img :src="imgplaceholderurl + getRandomInt(9)" alt="" @click="checkClick">
         </div>
         <div class="elements">
             <div class="circle" id="circle">
