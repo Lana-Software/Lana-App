@@ -1,4 +1,4 @@
-import fastify, { FastifyRequest } from 'fastify'
+import fastify, { type FastifyRequest } from 'fastify'
 import cors from '@fastify/cors'
 import fastifyStatic from '@fastify/static'
 import * as path from 'node:path'
