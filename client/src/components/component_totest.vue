@@ -3,7 +3,7 @@ import { ref } from "vue";
 const msg = ref("Hello World!");
 const new_msg = ref(undefined);
 const changeMsg = () => {
-	msg.value = new_msg.value
+	msg.value = new_msg.value;
 };
 </script>
 <template>
