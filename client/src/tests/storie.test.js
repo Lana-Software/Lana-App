@@ -2,7 +2,7 @@ import { mount } from "@vue/test-utils";
 /**
  * @vitest-environment happy-dom
  */
-import { describe, expect, it, test } from "vitest";
+import { describe, expect, it } from "vitest";
 import Story from "../views/view_story.vue";
 
 describe("Rendering", () => {
