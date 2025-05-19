@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev server/index.ts",
+    "start": "ts-node-dev ./index.ts",
     "test": "vitest",
     "test:commit": "echo \"Error: no tests defined yet\" && exit 0"
   },
