@@ -3,7 +3,7 @@ export interface user {
 	user_profile: string;
 	recent_post: {
 		comments: number;
-		likes: number;
+		likes: string;
 		image: string;
 	};
 }

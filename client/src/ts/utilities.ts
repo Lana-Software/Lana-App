@@ -10,8 +10,13 @@ export function getRandomStr(length: number) {
 	return result;
 }
 
-export function getRandomInt(num: number) {
-	return Math.floor(Math.random() * num + num / 1.5);
+export function getRandomBetween(min: number, max: number) {
+	return Math.floor(Math.random() * (max - min) + min);
+}
+
+export function formatNumber(num: number): string {
+	if (num >= 1_000) return `${(num / 1_000).toFixed(1).replace(/\.0$/, "")}k`;
+	return num.toString();
 }
 
 export function getRandomColor() {
