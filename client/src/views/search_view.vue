@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useUsersStore } from '../store/users'
+import { useUsersStore } from "../store/users";
 
-const usersStore = useUsersStore()
+const usersStore = useUsersStore();
 </script>
 
 <template>
@@ -26,12 +26,9 @@ const usersStore = useUsersStore()
 }
 
 .results-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: left;
-  box-sizing: border-box;
 }
 
 .search_result_item {
@@ -39,7 +36,7 @@ const usersStore = useUsersStore()
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: calc(50% - 7.5px);
+  max-width: 200px;
   height: 225px;
   background-color: var(--alter-color-two);
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);

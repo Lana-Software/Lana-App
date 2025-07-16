@@ -4,9 +4,7 @@ import component_history from "../components/component_story.vue";
 </script>
 
 <template>
-    <div>
-        <h2 class="share-title">Tell your story!</h2>
-    </div>
+    <h2 id="stories-title">Tell your story!</h2>
     <div class="stories-container">
         <div class="story-element" v-for="(user, i) in users_info" :id="'story'+i" :key="'story'+i" dir="ltr">
             <component_history :userinfo="user"/> 
@@ -15,32 +13,27 @@ import component_history from "../components/component_story.vue";
 </template>
 
 <style scoped>
-    .stories-container {
-        /* max-height: 100%; */
-        display: flex;
-        flex-flow: row nowrap;
-        /* width: 100%; */
-        justify-content: space-between;
-        overflow: auto;
-        /* scroll-behavior: smooth; */
-        scroll-snap-type: x mandatory;
-        
-    }
+.stories-container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+}
 
-    .story-element {
-        max-width: 225px;
-        min-width: 200px;
-        flex: 0 0 40vw;
-        box-sizing: border-box;
-        scroll-snap-align: center;
-        margin: 0 auto;
-        padding: 5px 10px;
-    }
-/* 
-    .story-element ::before {
-        content: 'HOLA PERRA';
-        color: blueviolet;
-        width: 225px;
-    } */
+#stories-title {
+	padding: 0 0 15px;
+	text-align: center;
+	color: var(--secondary-color);
+}
 
+.story-element {
+	max-width: 225px;
+	min-width: 200px;
+	flex: 0 0 40vw;
+	box-sizing: border-box;
+	scroll-snap-align: center;
+	margin: 0 auto;
+	padding: 5px 10px;
+}
 </style>

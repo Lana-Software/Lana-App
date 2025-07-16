@@ -38,10 +38,3 @@
         --alter-color-two: #F9F9F9;
     }
 }
-
-/* Y esto que puta vega hace aqui?! */
-.share-title {
-    padding: 15px;
-    text-align: center;
-    color: var(--secondary-color);
-}
