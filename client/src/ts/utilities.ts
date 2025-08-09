@@ -1,4 +1,4 @@
-export function getRandomStr(length: number) {
+export function getRandomLetters(length: number) {
 	const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	const characterslength = characters.length;
 	let result = "";
@@ -20,10 +20,10 @@ export function formatNumber(num: number): string {
 }
 
 export function getRandomColor() {
-	const letters = "0123456789ABCDEF";
+	const letters = "56789ABCDEF";
 	let color = "";
 	for (let i = 0; i < 6; i++) {
-		color += letters[Math.floor(Math.random() * 16)];
+		color += letters[Math.floor(Math.random() * 11)];
 	}
 	return color;
 }
