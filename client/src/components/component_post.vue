@@ -62,6 +62,7 @@ const postinfo = props.userinfo.recent_post;
 
 .circle {
 	width: 35%;
+	display: flex;
 	aspect-ratio: 1 / 1;
 	border-radius: 50%;
 	background-color: none;
@@ -75,7 +76,6 @@ const postinfo = props.userinfo.recent_post;
 .circle>img {
 	width: 100%;
 	border-radius: 50%;
-	position: absolute;
 }
 
 .icon-container {
