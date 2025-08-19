@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:client": "pnpm --filter lana-app-client start",
+    "start:server": "pnpm --filter server start",
+    "start": "pnpm run start:client & pnpm run start:server",
     "test:commit": "echo \"Error: no tests defined yet\" && exit 0"
   },
   "keywords": [],
