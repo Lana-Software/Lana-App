@@ -1,39 +1,43 @@
-# :stars: Lana App™ <img alt="alpha" src="https://img.shields.io/badge/WIP-orange" align="center">
+<p align="center">	
+	<img src="https://i.giphy.com/media/26gssIytJvy1b1THO/giphy.webp" style="width:250px;" title="placeholder banner image">
+</p>
 
+<h1 align="center">:stars: Lana App™ <img alt="alpha" src="https://img.shields.io/badge/WIP-orange"></h1>
 
-<section align="center">	
-<img alt="Build Status" src="https://github.com/Lana-Software/Lana-App/actions/workflows/pipeline.yml/badge.svg?branchName=main">
-<br>
-<img src="https://i.giphy.com/media/26gssIytJvy1b1THO/giphy.webp" style="width:250px;" title="welcome my dude">
-</section>
-
-<section align="center">
+<p align="center">
+	<a href="https://github.com/Lana-Software/Lana-App/actions/workflows/pipeline.yml">
+		<img alt="Test and deploy status" src="https://github.com/Lana-Software/Lana-App/actions/workflows/pipeline.yml/badge.svg?branchName=main">
+	</a>
+	<br>
   <a href="https://github.com/DuvanArwenLazar">
-    <img src="https://img.shields.io/github/followers/DuvanArwenLazar?label=DuvanArwenLazar&logo=github&logoColor=yellow&style=for-the-badge" alt="Developer 1">
+    <img src="https://img.shields.io/github/followers/DuvanArwenLazar?label=DuvanArwenLazar&logo=github&logoColor=yellow&style=for-the-badge&labelColor=303030" alt="Developer 1">
   </a>
  <a href="https://github.com/Kolozuz">
-    <img src="https://img.shields.io/github/followers/Kolozuz?label=Kolozuz&logo=github&logoColor=blue&style=for-the-badge" alt="Developer 2">
+    <img src="https://img.shields.io/github/followers/Kolozuz?label=Kolozuz&logo=github&logoColor=blue&style=for-the-badge&labelColor=303030" alt="Developer 2">
   </a>
  <a href="https://github.com/JohnGolgota">
-    <img src="https://img.shields.io/github/followers/JohnGolgota?label=JohnGolgota&logo=github&logoColor=red&style=for-the-badge" alt="Developer 3">
+    <img src="https://img.shields.io/github/followers/JohnGolgota?label=JohnGolgota&logo=github&logoColor=red&style=for-the-badge&labelColor=303030" alt="Developer 3">
   </a>
-</section>
+</p>
 
-This platform is the perfect place for those who want to share their most important moments, videos, and art with other users. Additionally, our unique artificial intelligence function has its own account that makes posts based on other users' posts, offering a personalized and unique experience for each user. Additionally, our platform is designed to showcase users' art and videos, offering a visually stunning and unique experience.
-
-With Lana we want to bring together the best aspects of the social networks you love all in one place...
-In summary, our social network is the ideal platform for those who want to share moments, videos, and art with other users quickly and easily.
+With Lana we want to bring together the best aspects of the social networks you know and love all in one place; Easily create visually stunning posts and stories to share your thoughts, moments and creations with the world like never before, with a focus on giving back control to users, this is the ideal place to show the world your truest version.
 
 ## Features
 
-Our platform is intuitive and easy to use, making it accessible for users of all experience levels. Furthermore, it is fast and designed to provide a seamless, uninterrupted experience. And best of all, it's completely free.
+Our platform is intuitive and easy to use, making it accessible for users of all experience levels. Furthermore, it is fast and designed to provide a seamless, uninterrupted experience, and best of all, it's completely free. Users have access to features such as:
 
-Among the features of our social network are chat, which allows users to communicate privately, share photos and videos, and other functions such as the ability to follow other users, tag friends, comment and "like" other users posts.
+**💬 Chat:** allows users to communicate privately, share posts and files.
 
-## Get Started
+**🌟 Posts / Stories:** powerfull feature-rich posts and stories creation tools, once a post is published users can like, comment, tag friends, share, repost, save, etc.
+
+**👤 Profiles:** easy, flexible customization of pretty much every single aspect that allows each profile to be completely unique.
+
+... And many more!
 
 > [!NOTE]
-> Refer <a href="https://lana-software.github.io/Lana-App/wiki" target="_blank" rel="noopener noreferrer">here</a> for detailed instructions and documentation about all our features
+> You can refer <a href="https://lana-software.github.io/Lana-App/wiki" target="_blank" rel="noopener noreferrer">here</a> to discover all of the features in detail.
+
+## Get Started
 
 First head up to our official website clicking [here](www.lanaapp.com)
 
@@ -54,34 +58,37 @@ And that's it, you're all set! now you're part of this amazing family and are fr
 
 <!-- Technologies stack table -->
 <table>
-  <tr>
-  <th>Frontend</th>
-  <td>
-   <a href="www.vitejs.com"><img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" width="100%"></a>
-  </td>
-  <td>
-   <a href="www.vuejs.com"><img src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D" width="100%"></a>
-  </td>
-  <td>
-   <a href="www.tailwind.com"><img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"></a>
-  </td>
- </tr>
- <tr>
-  <th>Design</th>
-  <td colspan="3">
-   <a href="www.figma.com"><img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"></a>
-  </td>
- </tr>
- <tr>
-  <th>Backend</th>
-   <td colspan="3">
-    <a href="www.nodejs.com"><img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></a>
-   </td>
- </tr>
- <tr>
-  <th>Database</th>
-   <td colspan="3">
-    <a href="www.mongodb.com"><img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"></a>
-   </td>
- </tr>
+	<tr align="center">
+		<th>Frontend</th>
+		<td>
+ 			<a href="www.vitejs.com"><img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white"></a>
+		</td>
+		<td>
+ 			<a href="www.vuejs.com"><img src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D"></a>
+		</td>
+		<td>
+		 <a href="www.tailwind.com"><img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"></a>
+		</td>
+ 	</tr>
+	<tr>
+		<th>Design</th>
+		<td colspan="3">
+		 <a href="www.figma.com"><img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"></a>
+		</td>
+	</tr>
+	<tr>
+	  <th>Backend</th>
+		<td>
+			<a href="www.nodejs.com"><img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></a>
+		</td>
+		<td colspan="2">
+			<a href="www.nodejs.com"><img src="https://img.shields.io/badge/fastify-000000?style=for-the-badge&logo=fastify&logoColor=white"></a>
+		</td>
+	 </tr>
+	 <tr>
+	  <th>Database</th>
+	   <td colspan="3">
+			 <a href="https://fastify.dev/"><img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"></a>
+	   </td>
+	 </tr>
 </table>
