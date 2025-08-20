@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:client": "pnpm --filter lana-app-client start",
+    "start:server": "pnpm --filter server start",
+    "start": "pnpm run start:client & pnpm run start:server",
     "test:commit": "echo \"Error: no tests defined yet\" && exit 0"
   },
   "keywords": [],
@@ -21,5 +24,10 @@
     "client",
     "server"
   ],
-  "packageManager": "pnpm@8.15.5+sha1.a58c038faac410c947dbdb93eb30994037d0fce2"
+  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "lefthook"
+    ]
+  }
 }
