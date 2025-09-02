@@ -10,12 +10,14 @@ const usersStore = useUsersStore();
             <h2 class="title">Search results</h2>
         </div>
         <div class="results-container">
-            <div class="search_result_item" v-for="(user, i) in usersStore.getUsers" :key="'user_' + i">
-                <div class="crop">
-                    <img :src="user.profile_picture" alt="">
-                </div>
-                <div class="username">@{{ user.name }}</div>
-            </div>
+			<div class="result-container" v-for="(user, i) in usersStore.getUsers" :key="'user_' + i">
+				<div class="result">
+					<div class="crop">
+						<img :src="user.profile_picture" alt="">
+					</div>
+					<div class="username">@{{ user.name }}</div>
+				</div>
+			</div>
         </div>
     </div>
 </template>
@@ -29,9 +31,15 @@ const usersStore = useUsersStore();
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
+  justify-content: center;
 }
 
-.search_result_item {
+.result-container {
+	display: flex;
+	justify-content: center;
+}
+
+.result {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -45,12 +53,12 @@ const usersStore = useUsersStore();
   box-sizing: border-box;
 }
 
-.search_result_item>.crop {
+.result>.crop {
   width: 100%;
   height: 85%;
 }
 
-.search_result_item>.crop>img {
+.result>.crop>img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -58,7 +66,7 @@ const usersStore = useUsersStore();
   border-radius: 24px;
 }
 
-.search_result_item>.username {
+.result>.username {
   display: flex;
   font-size: 15px;
   color: var(--secondary-color);
