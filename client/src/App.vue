@@ -1,6 +1,6 @@
 <script setup lang="ts">
-	import index_navbar from "./components/component_navbar.vue";
-	import index_footer from "./components/component_footer.vue";
+import index_footer from "./components/component_footer.vue";
+import index_navbar from "./components/component_navbar.vue";
 </script>
 
 <template>
