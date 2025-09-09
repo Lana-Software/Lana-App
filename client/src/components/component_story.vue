@@ -1,10 +1,10 @@
 <script setup lang="ts">
-    import type { user } from '../views/user';
-    import { getRandomBetween } from '../ts/utilities'
+import { getRandomBetween } from "../ts/utilities";
+import type { user } from "../views/user";
 
-	const checkClick = () => {
-		console.log("Si linea 3 component_story.vue");
-	}
+const checkClick = () => {
+	console.log("Si linea 3 component_story.vue");
+};
 
 const props = defineProps<{ userinfo: user }>();
 const userinfo = props.userinfo;

@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import { useUsersStore } from '../store/users'
-import { useRouter } from 'vue-router'
-import { ref } from 'vue'
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+import { useUsersStore } from "../store/users";
 
-const usersStore = useUsersStore()
+const usersStore = useUsersStore();
 
-const router = useRouter()
+const router = useRouter();
 
-const query = ref('')
-const dialog = ref<HTMLDialogElement | null>(null)
+const query = ref("");
+const dialog = ref<HTMLDialogElement | null>(null);
 
 const submitQuery = (e: Event) => {
-	e.preventDefault()
-	usersStore.searchUsers(query.value)
-	router.push({ name: 'Search', query: { q: query.value } })
+	e.preventDefault();
+	usersStore.searchUsers(query.value);
+	router.push({ name: "Search", query: { q: query.value } });
 
 	// Close the dialog manually since we're preventing the default form submission
-	dialog.value?.close()
-}
+	dialog.value?.close();
+};
 
 const openSearchModal = () => {
-	dialog.value?.showModal()
-}
+	dialog.value?.showModal();
+};
 </script>
 
 <template>
