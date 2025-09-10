@@ -10,7 +10,7 @@ const postinfo = props.userinfo.recent_post;
 </script>
 
 <template>
-	<div class="post-container">
+	<div class="post">
 		<div id="image">
 			<img :src="postinfo.image" alt="post background image">
 		</div>
@@ -31,8 +31,10 @@ const postinfo = props.userinfo.recent_post;
 </template>
 
 <style scoped>
-.post-container{
+.post {
 	max-width: 200px;
+	min-width: 150px;
+	flex: 1;
 	height: 230px;
 	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
 	border-radius: 24px;

@@ -7,7 +7,7 @@ import { users_info } from "./users_info";
 	<div class="content">
 		<h2 id="share-title">Share Your Moments!</h2>
 		<div class="posts-container">
-			<div class="post-element" v-for="(user, i) in users_info" :id="'post'+i" :key="'post'+i">
+			<div class="post-container" v-for="(user, i) in users_info" :id="'post'+i" :key="'post'+i">
 				<component_post :userinfo="user"/>
 			</div>
 		</div>
@@ -32,4 +32,8 @@ import { users_info } from "./users_info";
 	justify-content: center;
 }
 
+.post-container {
+	display: flex;
+	justify-content: center;
+}
 </style>
