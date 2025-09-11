@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useUsersStore } from "../store/users";
+import { useSearchEngineStore } from "../store/search_engine";
 
-const usersStore = useUsersStore();
+const searchEngineStore = useSearchEngineStore();
 </script>
 
 <template>
@@ -10,7 +10,7 @@ const usersStore = useUsersStore();
             <h2 class="title">Search results</h2>
         </div>
         <div class="results-container">
-          <div class="result-container" v-for="(user, i) in usersStore.getUsers" :key="'user_' + i">
+          <div class="result-container" v-for="(user, i) in searchEngineStore.getUsers" :key="'user_' + i">
             <div class="result">
               <div class="crop">
                 <img :src="user.profile_picture" alt="">

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import { useUsersStore } from "../store/users";
+import { useSearchEngineStore } from "../store/search_engine";
 
-const usersStore = useUsersStore();
+const searchEngineStore = useSearchEngineStore();
 
 const router = useRouter();
 
@@ -12,7 +12,7 @@ const dialog = ref<HTMLDialogElement | null>(null);
 
 const submitQuery = (e: Event) => {
 	e.preventDefault();
-	usersStore.searchUsers(query.value);
+	searchEngineStore.search(query.value);
 	router.push({ name: "Search", query: { q: query.value } });
 
 	// Close the dialog manually since we're preventing the default form submission
