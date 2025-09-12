@@ -1,13 +1,6 @@
 import { defineStore } from "pinia";
-import {
-	formatNumber,
-	getRandomBetween,
-	getRandomColor,
-	getRandomLetters,
-} from "../ts/utilities";
-import type { Post } from "./post";
-
-const imgid = 0;
+import type { Post } from "../types/post";
+import type { User } from "../types/user";
 
 export const useSearchEngineStore = defineStore("searchEngine", {
 	state: () => ({
@@ -15,6 +8,8 @@ export const useSearchEngineStore = defineStore("searchEngine", {
 			users: [] as User[],
 			posts: [] as Post[],
 		},
+		previousQuery: "",
+		success: false,
 	}),
 	getters: {
 		getUsers: (state) => {
@@ -26,10 +21,16 @@ export const useSearchEngineStore = defineStore("searchEngine", {
 	},
 	actions: {
 		async search(query: string) {
-			console.log("Buscando...");
-			const response = await fetch(`/api/${query}`);
-			const data = await response.json();
-			this.results.users = data; // TODO: make response be an object including both users and posts and assign that to state.results -> `this.results = data` where `data == { users: ..., posts: ... }`
+			try {
+				const response = await fetch(`/api/${query}`);
+				const data = await response.json();
+
+				this.results = data;
+			} catch (error) {
+				console.log(`Error en la busqueda: ${error}`);
+			}
+			this.previousQuery = query;
+			this.success = true;
 		},
 	},
 });

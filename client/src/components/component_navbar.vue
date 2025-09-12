@@ -11,12 +11,14 @@ const query = ref("");
 const dialog = ref<HTMLDialogElement | null>(null);
 
 const submitQuery = (e: Event) => {
-	e.preventDefault();
-	searchEngineStore.search(query.value);
-	router.push({ name: "Search", query: { q: query.value } });
+	if (query.value) {
+		e.preventDefault();
+		searchEngineStore.search(query.value);
+		router.push({ name: "Search", query: { q: query.value } });
 
-	// Close the dialog manually since we're preventing the default form submission
-	dialog.value?.close();
+		// Close the dialog manually since we're preventing the default form submission
+		dialog.value?.close();
+	}
 };
 
 const openSearchModal = () => {
@@ -33,7 +35,7 @@ const openSearchModal = () => {
 		</div>
 		<div class="search" id="search_big_screen">
 			<form @submit.prevent="submitQuery">
-				<input type="text" class="search-bar" v-model="query" aria-label="Search">
+				<input type="text" class="search-bar" v-model="query" aria-label="Search" required>
 				<button type="submit" class="search-btn" aria-label="Search">
 					<fa :icon="['fas', 'magnifying-glass']" />
 				</button>
@@ -52,7 +54,7 @@ const openSearchModal = () => {
 			<dialog ref="dialog" id="search-dialog" closedby="any" openedby="mini-search-btn">
 				<div class="search" id="search_small_screen">
 					<form method="dialog" @submit.prevent="submitQuery">
-						<input type="text" class="search-bar" v-model="query" aria-label="Search">
+						<input type="text" class="search-bar" v-model="query" aria-label="Search" required>
 						<button type="submit" class="search-btn" aria-label="Search">
 							<fa :icon="['fas', 'magnifying-glass']" />
 						</button>

@@ -1,25 +1,38 @@
 <script setup lang="ts">
+import { useRoute } from "vue-router";
+import component_post from "../components/component_post.vue";
 import { useSearchEngineStore } from "../store/search_engine";
 
+const router = useRoute();
 const searchEngineStore = useSearchEngineStore();
+
+// Perform search every time this component is loaded unless the search has already been made
+if (!searchEngineStore.success) {
+	searchEngineStore.search(router.query);
+}
 </script>
 
 <template>
-    <div class="content">
-        <div>
-            <h2 class="title">Search results</h2>
-        </div>
-        <div class="results-container">
-          <div class="result-container" v-for="(user, i) in searchEngineStore.getUsers" :key="'user_' + i">
-            <div class="result">
-              <div class="crop">
-                <img :src="user.profile_picture" alt="">
-              </div>
-              <div class="username">@{{ user.name }}</div>
-            </div>
-          </div>
-        </div>
-    </div>
+	<div class="content">
+		<div>
+			<h2 class="title">{{ searchEngineStore.success ? 'Search results' : 'Searching...' }}</h2>
+		</div>
+		<div class="users-results-container">
+			<div class="result-container" v-for="(user, i) in searchEngineStore.getUsers" :key="'user_' + i">
+				<div class="result">
+					<div class="crop">
+						<img :src="user.profilePicture" alt="">
+					</div>
+					<div class="username">@{{ user.userName }}</div>
+				</div>
+			</div>
+		</div>
+		<div class="posts-results-container">
+			<div class="result-container" v-for="(post, i) in searchEngineStore.getPosts" :key="'post_' + i">
+				<component_post :userinfo="post"/> <!-- TODO: refactor component_post so that it receives and handles the a Post object and so that it can have different appeareance based on the truthness of a `placeholder` prop -->
+			</div>
+		</div>
+	</div>
 </template>
 
 <style scoped>
@@ -27,7 +40,7 @@ const searchEngineStore = useSearchEngineStore();
   padding: 19px;
 }
 
-.results-container {
+.users-results-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
