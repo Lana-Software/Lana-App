@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
 import component_post from "../components/component_post.vue";
-import { useSearchEngineStore } from "../store/search_engine";
+import { SearchStatus, useSearchEngineStore } from "../store/search_engine";
 
 const router = useRoute();
 const searchEngineStore = useSearchEngineStore();
 
-// Perform search every time this component is loaded unless the search has already been made
-if (!searchEngineStore.success) {
+// Perform search every time this component is loaded unless the search is already being done
+if (searchEngineStore.status === SearchStatus.IDLE) {
 	searchEngineStore.search(router.query);
 }
 </script>
@@ -15,7 +15,7 @@ if (!searchEngineStore.success) {
 <template>
 	<div class="content">
 		<div>
-			<h2 class="title">{{ searchEngineStore.success ? 'Search results' : 'Searching...' }}</h2>
+			<h2 class="title">{{ searchEngineStore.status === SearchStatus.RUNNING ? 'Searching...' : 'Search results' }}</h2>
 		</div>
 		<div class="users-results-container">
 			<div class="result-container" v-for="(user, i) in searchEngineStore.getUsers" :key="'user_' + i">
