@@ -21,13 +21,13 @@ export async function runSearch(query: string) {
 
 		// Define the queries for the search
 		const usersQueryArgs = {
-			userName: { $regex: query, $options: "i" },
+			userName: { $regex: `^${query}`, $options: "i" },
 		};
 		const postsQueryArgs = {
 			$or: [
 				{
 					"author.userName": {
-						$regex: `/^${query}/i`,
+						$regex: `^${query}`,
 						$options: "i",
 					},
 				},
