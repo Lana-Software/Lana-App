@@ -3,7 +3,7 @@ import cors from "@fastify/cors";
 import fastifyStatic from "@fastify/static";
 import * as dotenv from "dotenv";
 import fastify, { type FastifyRequest } from "fastify";
-import { run } from "./db/mongo";
+import { runSearch } from "./db/mongo";
 
 dotenv.config();
 
@@ -20,7 +20,7 @@ server.register(fastifyStatic, {
 	prefix: "/",
 });
 
-server.get("/search", (request, reply) => {
+server.get("/search", (_request, reply) => {
 	reply.sendFile("index.html");
 });
 
@@ -28,7 +28,7 @@ server.get(
 	"/api/:chara",
 	async (request: FastifyRequest<{ Params: { chara: string } }>, reply) => {
 		const { chara } = request.params;
-		const res = await run(chara);
+		const res = await runSearch(chara);
 		reply.send(res);
 	},
 );
