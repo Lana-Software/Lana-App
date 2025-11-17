@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import component_post from "../components/component_post.vue";
-import { users_info } from "./users_info";
+import { postsPlaceholders } from "../ts/posts_placeholders";
 </script>
 
 <template>
 	<div class="content">
 		<h2 id="share-title">Share Your Moments!</h2>
 		<div class="posts-container">
-			<div class="post-container" v-for="(user, i) in users_info" :id="'post'+i" :key="'post'+i">
+			<div class="post-container" v-for="(user, i) in postsPlaceholders" :id="'post'+i" :key="'post'+i">
 				<component_post :userinfo="user"/>
 			</div>
 		</div>
