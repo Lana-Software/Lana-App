@@ -1,27 +1,14 @@
 <script setup lang="ts">
 import { getRandomBetween } from "../ts/utilities";
-import type { user } from "../views/user";
-
-const checkClick = () => {
-	console.log("Si linea 3 component_story.vue");
-};
-
-const props = defineProps<{ userinfo: user }>();
-const userinfo = props.userinfo;
 const imgplaceholderurl = "https://picsum.photos/200/300?random=";
 </script>
 
 <template>
     <div class="story-container">
         <div class="image">
-            <img :src="imgplaceholderurl + getRandomBetween(0,9)" alt="" @click="checkClick">
+            <img :src="imgplaceholderurl + getRandomBetween(0,9)" alt="placeholder story image">
         </div>
         <div class="elements">
-            <div class="circle" id="circle">
-                <div class="profile">
-                    <img :src="userinfo.user_profile" alt="" id="img">
-                </div>
-            </div>
             <div class="username-container">
                 <p class="username">@lana_latam</p>
             </div>

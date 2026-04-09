@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import { users_info } from "./users_info";
 import component_history from "../components/component_story.vue";
 </script>
 
 <template>
     <h2 id="stories-title">Tell your story!</h2>
     <div class="stories-container">
-        <div class="story-element" v-for="(user, i) in users_info" :id="'story'+i" :key="'story'+i" dir="ltr">
-            <component_history :userinfo="user"/> 
+        <div class="story-element" v-for="(user, i) in 6" :id="'story'+i" :key="'story'+i" dir="ltr">
+            <component_history /> 
         </div>
     </div>
 </template>
